@@ -11,9 +11,7 @@ const techstack = [
   { id: 6, name: "MongoDB", category: "Database", level: "Intermediate", src: "https://cdn.simpleicons.org/mongodb/47A248", color: "#47A248" },
   { id: 7, name: "Git", category: "Tools", level: "Intermediate", src: "https://cdn.simpleicons.org/git/F05032", color: "#F05032" },
   { id: 8, name: "Docker", category: "DevOps", level: "Intermediate", src: "https://cdn.simpleicons.org/docker/2496ED", color: "#2496ED" },
-  { id: 9, name: "AWS", category: "Cloud", level: "Advanced", src: "https://logo.svgcdn.com/logos/aws.svg", color: "#FF9900" },
-  { id: 10, name: "GraphQL", category: "Backend", level: "Intermediate", src: "https://cdn.simpleicons.org/graphql/E10098", color: "#E10098" },
-  { id: 11, name: "Redux", category: "Frontend", level: "Inteermediate", src: "https://cdn.simpleicons.org/redux/764ABC", color: "#764ABC" },
+  { id: 9, name: "AWS", category: "Cloud", level: "Advanced", src: "https://skillicons.dev/icons?i=aws", color: "#FF9900" },
   { id: 12, name: "Figma", category: "Design", level: "Intermediate", src: "https://cdn.simpleicons.org/figma/F24E1E", color: "#F24E1E" },
   { id: 13, name: "PostgreSQL", category: "Database", level: "Intermediate", src: "https://cdn.simpleicons.org/postgresql/4169E1", color: "#4169E1" },
   { id: 14, name: "Python", category: "Language", level: "Intermediate", src: "https://cdn.simpleicons.org/python/3776AB", color: "#3776AB" },
@@ -74,6 +72,7 @@ const TechStack = () => {
 
   return (
     <section
+      id="techstack"
       className="relative min-h-screen px-4 sm:px-6 py-24 sm:py-32 overflow-hidden font-sans"
       ref={containerRef}
     >

@@ -227,31 +227,36 @@ const navlinks = [
   },
   {
     id: 3,
+    text: "Tech Stack",
+    link: "#techstack"
+  },
+  {
+    id: 4,
     text: "Gallery",
     link: "#gallery"
   },
   {
-    id: 4,
+    id: 5,
     text: "Educations",
     link: "#educations"
   },
   {
-    id: 5,
+    id: 6,
     text: "Featured Projects",
     link: "#projects"
   },
   {
-    id: 6,
+    id: 7,
     text: "GitHub",
     link: "#github"
   },
   {
-    id: 7,
+    id: 8,
     text: "Achievements",
     link: "#achievements"
   },
   {
-    id: 8,
+    id: 9,
     text: "Contact Me",
     link: "#contact"
   },
@@ -375,16 +380,7 @@ const projectsData = [
     linkCode : "https://github.com/Raditt10/Kultilas"
   },
 
-  {
-    id: 2,
-    gambar: "kulkul.png",
-    judul: "Kul-kul",
-    parag: "Kul-kul is an application for managing finances in schools, especially for extracurricular activities.",
-    tech: ["Laravel","MySQL", "Tailwind", "Vite"],
-    linkDemo : "#",
-    linkCode : "https://github.com/Raditt10/kulkul",
-    isComingSoon: true
-  },
+
 
   {
     id: 3,
@@ -433,91 +429,82 @@ const projectsData = [
   }
 ]
 
-const dataCerti = [
+const dataCerti = [ 
   {
     id: 1,
-    gambar: "machung.webp",
-    judul : "Participation in POSTER MAKER (Machung School)",
-    link: "https://drive.google.com/drive/folders/1lQhCp73UNCH-Ky69UEpVG6vwcLmMPa2v"
+    gambar: "sertif_olim_informatika.webp",
+    judul : "1st Place - Indonesian Science Olympiad (ISO) Informatika Subject"
   },
-
   {
     id: 2,
-    gambar: "informatika.webp",
-    judul : "1st Place in ISO ( Indonesian Science Olympiad ) Informatika Subject",
-    link: "https://drive.google.com/drive/folders/1lQhCp73UNCH-Ky69UEpVG6vwcLmMPa2v"
+    gambar: "sertif_jhic.webp",
+    judul : "Semi finalist - Competition and Bootcamp JHIC"
   },
-
   {
     id: 3,
-    gambar: "UPT.webp",
-    judul : "Participation in POSTER MAKER UPT",
-    link: "https://drive.google.com/drive/folders/1lQhCp73UNCH-Ky69UEpVG6vwcLmMPa2v"
+    gambar: "sertif_sic.webp",
+    judul : "Participation - Bootcamp digital marketing Samsung Indonesia Tech Institute"
   },
-
   {
     id: 4,
-    gambar: "jhic.webp",
-    judul : "Semi finalist in Competition and Bootcamp JHIC",
-    link: "https://drive.google.com/drive/folders/1lQhCp73UNCH-Ky69UEpVG6vwcLmMPa2v"
+    gambar: "sertif_dicoding.webp",
+    judul : "Participation Bootcamp Basic AI - Dicoding"
   },
-
   {
     id: 5,
-    gambar: "samsung.webp",
-    judul : "Participation in Bootcamp digital marketing Samsung Indonesia Tech Institute",
-    link: "https://drive.google.com/drive/folders/1lQhCp73UNCH-Ky69UEpVG6vwcLmMPa2v"
+    gambar: "sertif-aws1.webp",
+    judul : "Official Practice Question Set: AWS Certified Solutions Architect - Associate"
   },
-
   {
     id: 6,
-    gambar: "dicoding.webp",
-    judul : "Participation in Basic AI in Bootcamp Dicoding",
-    link: "https://drive.google.com/drive/folders/1lQhCp73UNCH-Ky69UEpVG6vwcLmMPa2v"
+    gambar: "sertif-aws2.webp",
+    judul : "Official Practice Question Set: AWS Certified AI Practitioner"
   },
-
-    {
+  {
     id: 7,
-    gambar: "indo.webp",
-    judul : "1st Place ISSC (Indonesian Student Science Competition)",
-    link: "https://drive.google.com/drive/folders/1lQhCp73UNCH-Ky69UEpVG6vwcLmMPa2v"
+    gambar: "sertif-aws3.webp",
+    judul : "Fundamentals of Machine Learning and Artificial Intelligence (Bahasa Indonesia)"
   },
-  
-   {
+  {
     id: 8,
-    gambar: "sejarah.webp",
-    judul : "2nd Place OSNK in History Subject 2025",
-    link: "https://drive.google.com/drive/folders/1lQhCp73UNCH-Ky69UEpVG6vwcLmMPa2v"
+    gambar: "sertif-aws4.webp",
+    judul : "Fundamentals of Machine Learning and Artificial Intelligence (Bahasa Indonesia)"
   },
-
   {
     id: 9,
-    gambar: "ruangguru.webp",
-    judul : "Participation in Event KSR 2025 By Ruangguru",
-    link: "https://drive.google.com/drive/folders/1lQhCp73UNCH-Ky69UEpVG6vwcLmMPa2v"
+    gambar: "sertif-aws5.webp",
+    judul : "AWS Cloud Practitioner Essentials (Bahasa Indonesia)"
   },
-
   {
     id: 10,
-    gambar: "aws.webp",
-    judul : "AWS Cloud Practitioner Essentials (Fundamental Level)",
-    link: "https://drive.google.com/drive/folders/1lQhCp73UNCH-Ky69UEpVG6vwcLmMPa2v"
+    gambar: "sertif-aws6.webp",
+    judul : "Job Roles in the Cloud (Bahasa Indonesia)"
   },
-
   {
     id: 11,
-    gambar: "ed.webp",
-    judul : "Awarded as an accomplishment of TOEIC Excellence Program",
-    link: "https://drive.google.com/drive/folders/1lQhCp73UNCH-Ky69UEpVG6vwcLmMPa2v"
+    gambar: "sertif-aws7.jpg",
+    judul : "AWS Technical Essentials (Instruktur Indonesia)"
   },
   {
     id: 12,
-    gambar: "itsoft_lkskota.webp",
-    judul : "Winner in The Competition IT SOFTWARE SOLUTION FOR BUSINESS in LKS Kota Bandung 2026",
-    link: "https://drive.google.com/drive/folders/1lQhCp73UNCH-Ky69UEpVG6vwcLmMPa2v"
-  }
-
-
+    gambar: "sertif_ed.webp",
+    judul : "Awarded as an accomplishment of TOEIC Excellence Program"
+  },
+  {
+    id: 13,
+    gambar: "sertif_itsoft_lkskota.webp",
+    judul : "Winner in The Competition IT SOFTWARE SOLUTION FOR BUSINESS - LKS Kota Bandung 2026"
+  },
+  {
+    id: 14,
+    gambar: "sertif-itsoft_lks_prov.webp",
+    judul : "Winner in The Competition IT SOFTWARE SOLUTION FOR BUSINESS - LKS Provinsi Jawa Barat 2026"
+  },
+  {
+    id: 15,
+    gambar: "sertif_bootcamp_ai_polri.webp",
+    judul : "Participation in Bootcamp Basic AI - POLRES JAWA BARAT"
+  },
 ]
 export { navlinks, techstack, projectsData, dataCerti, GITHUB_USERNAME, GITHUB_PROFILE_URL }
 

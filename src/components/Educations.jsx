@@ -20,28 +20,7 @@ const Educations = () => {
 
   // Data Timeline
   const timelineData = [
-    {
-      year: "2008",
-      title: "The Genesis",
-      subtitle: "Kelahiran",
-      description: "Awal perjalanan hidup saya dimulai. Lembaran pertama dari sebuah cerita panjang.",
-      type: "milestone",
-      childhoodPhotos: ["/img/bocil1.jpg", "/img/bocil2.jpg", "/img/bocil3.jpg"]
-    },
-    {
-      year: "2014 - 2015",
-      title: "TK Darul Fikri",
-      subtitle: "Masa Bermain & Belajar",
-      description: "Mengenal dunia di luar rumah, belajar bersosialisasi, dan membangun pondasi karakter sejak dini.",
-      logo: "/img/tk.png",
-    },
-    {
-      year: "2015 - 2020",
-      title: "SD 090 Cibiru",
-      subtitle: "Sekolah Dasar",
-      description: "Masa eksplorasi selama 6 tahun. Belajar disiplin, tanggung jawab, dan dasar ilmu pengetahuan.",
-      logo: "/img/sd.png",
-    },
+
     {
       year: "2020 - 2023",
       title: "SMPN 1 Cileunyi",

@@ -5,9 +5,18 @@ const Opening = ({ onComplete }) => {
   const containerRef = useRef(null);
   const textContainerRef = useRef(null);
   const counterRef = useRef(null);
-  const [isFinished, setIsFinished] = useState(false);
+  const [isFinished, setIsFinished] = useState(() => {
+    return sessionStorage.getItem("hasSeenOpening") === "true";
+  });
 
   useEffect(() => {
+    if (isFinished) {
+      if (onComplete) onComplete();
+      return;
+    }
+
+    sessionStorage.setItem("hasSeenOpening", "true");
+
     // Prevent scrolling during animation
     document.body.style.overflow = 'hidden';
 
@@ -74,7 +83,7 @@ const Opening = ({ onComplete }) => {
     });
 
     return () => {
-        tl.kill();
+        if (tl) tl.kill();
         document.body.style.overflow = 'unset';
     };
   }, [onComplete]);
