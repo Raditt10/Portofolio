@@ -200,7 +200,6 @@ const TimelineCard = ({ data, index, isEven, isLight }) => {
                 : 'bg-white text-black border-transparent'
             }`}>
               {data.year} 
-              {data.current && <span className={`flex h-1.5 w-1.5 rounded-full ${isLight ? 'bg-white' : 'bg-black'} animate-pulse`} />}
             </div>
 
             <div className={`flex items-center gap-5 mb-4`}>
