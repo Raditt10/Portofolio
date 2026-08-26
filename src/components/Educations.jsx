@@ -70,8 +70,7 @@ const Educations = () => {
             }} 
         />
         
-        {/* Very Subtle Gradient Spot (Gray) */}
-        <div className={`absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-20 ${isLight ? 'bg-gray-200' : 'bg-white/10'}`} />
+
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
