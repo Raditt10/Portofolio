@@ -22,7 +22,7 @@ export default defineConfig({
     minify: 'esbuild',
     // CSS code splitting
     cssCodeSplit: true,
-    // Target modern browsers for smaller output
+    // Target modern rowsers for smaller output
     target: 'es2020',
   },
   // Optimize dependency pre-bundling
