@@ -229,16 +229,14 @@ const Gallery = () => {
 };
 
 // --- SUB-COMPONENT: GALLERY CARD ---
-const GalleryCard = ({ image, index, onClick, isLight, className = "" }) => {
+const GalleryCard = React.memo(({ image, index, onClick, isLight, className = "" }) => {
     const cardRef = useRef(null);
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     const handleMouseMove = (e) => {
+        if (!cardRef.current) return;
         const rect = cardRef.current.getBoundingClientRect();
-        setMousePosition({
-            x: e.clientX - rect.left,
-            y: e.clientY - rect.top,
-        });
+        cardRef.current.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+        cardRef.current.style.setProperty('--my', `${e.clientY - rect.top}px`);
     };
 
     return (
@@ -258,7 +256,7 @@ const GalleryCard = ({ image, index, onClick, isLight, className = "" }) => {
             <div 
                 className={`hidden md:block absolute inset-0 z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
                 style={{
-                    background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, ${
+                    background: `radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), ${
                         isLight ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.15)'
                     }, transparent 40%)`
                 }}
@@ -285,7 +283,7 @@ const GalleryCard = ({ image, index, onClick, isLight, className = "" }) => {
             </div>
         </motion.div>
     );
-};
+});
 
 // --- SUB-COMPONENT: INSTAGRAM CARD ---
 const InstagramCard = ({ isLight, className = "" }) => {

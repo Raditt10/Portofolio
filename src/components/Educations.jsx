@@ -134,14 +134,12 @@ const Educations = () => {
 // --- SUB-COMPONENT: MONOCHROME CARD ---
 const TimelineCard = ({ data, index, isEven, isLight }) => {
   const cardRef = useRef(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
+    if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
-    setMousePosition({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
+    cardRef.current.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+    cardRef.current.style.setProperty('--my', `${e.clientY - rect.top}px`);
   };
 
   return (
@@ -186,7 +184,7 @@ const TimelineCard = ({ data, index, isEven, isLight }) => {
                 isLight ? 'bg-gray-100/50' : 'bg-white/5'
             }`}
             style={{
-                background: `radial-gradient(400px circle at ${mousePosition.x}px ${mousePosition.y}px, ${
+                background: `radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), ${
                     isLight ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.08)'
                 }, transparent 40%)`
             }}

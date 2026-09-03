@@ -2,13 +2,13 @@ import { useState, useEffect, lazy, Suspense } from 'react';
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import TechStack from './components/TechStack';
-import About from './components/About';
 import Opening from './components/Opening';
 import CustomCursor from './components/CustomCursor';
 import NotFound from './components/NotFound';
 import LazyMount from './components/LazyMount';
-import GitHubContributions from './components/GitHubContributions';
+const About = lazy(() => import('./components/About'));
+const TechStack = lazy(() => import('./components/TechStack'));
+const GitHubContributions = lazy(() => import('./components/GitHubContributions'));
 const Gallery = lazy(() => import('./components/Gallery'));
 const Educations = lazy(() => import('./components/Educations'));
 const Projetcs = lazy(() => import('./components/Projetcs'));
@@ -58,8 +58,12 @@ function App() {
           <>
             <Navbar />
             <Hero />
-            <About />
-            <TechStack />
+            <LazyMount height={600}>
+              <Suspense fallback={<div style={{height:600}} />}> <About /> </Suspense>
+            </LazyMount>
+            <LazyMount height={600}>
+              <Suspense fallback={<div style={{height:600}} />}> <TechStack /> </Suspense>
+            </LazyMount>
             <LazyMount height={600}>
               <Suspense fallback={<div style={{height:600}} />}> <Gallery /> </Suspense>
             </LazyMount>
@@ -70,7 +74,9 @@ function App() {
               <Suspense fallback={<div style={{height:600}} />}> <Projetcs /> </Suspense>
             </LazyMount>
             <LazyMount height={420}>
-              <GitHubContributions />
+              <Suspense fallback={<div style={{height:420}} />}>
+                <GitHubContributions />
+              </Suspense>
             </LazyMount>
             <LazyMount height={600}>
               <Suspense fallback={<div style={{height:600}} />}> <Achievements /> </Suspense>

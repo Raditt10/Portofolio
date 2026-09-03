@@ -8,15 +8,12 @@ import { useNavigate } from "react-router-dom";
 const ProjectCard = ({ gambar, judul, parag, tech, linkDemo, linkCode, isComingSoon, isLight }) => {
   const navigate = useNavigate();
   const cardRef = useRef(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
-    setMousePosition({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
+    cardRef.current.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+    cardRef.current.style.setProperty('--my', `${e.clientY - rect.top}px`);
   };
 
   const handle404 = (e) => {
@@ -38,7 +35,7 @@ const ProjectCard = ({ gambar, judul, parag, tech, linkDemo, linkCode, isComingS
       <div 
         className={`absolute inset-0 z-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
         style={{
-            background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, ${
+            background: `radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), ${
                 isLight ? 'rgba(0,0,0,0.03)' : 'rgba(255,255,255,0.05)'
             }, transparent 40%)`
         }}
