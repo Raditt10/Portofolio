@@ -95,8 +95,8 @@ const rawNavLinks = [
 
 const rawSocialLinks = [
   { label: "GitHub", href: "https://github.com/Raditt10", iconName: "Github" },
-  { label: "Instagram", href: "https://www.instagram.com/rafadityas/", iconName: "Instagram" },
-  { label: "Email", href: "mailto:rafadityasyahputra@gmail.com", iconName: "Mail" },
+  { label: "Instagram", href: "https://www.instagram.com/zeroclo.id/", iconName: "Instagram" },
+  { label: "Email", href: "mailto:iniakuraditt@gmail.com", iconName: "Mail" },
   { label: "Resume / CV", href: "/file/CV.pdf", iconName: "FileText" }
 ];
 

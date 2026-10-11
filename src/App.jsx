@@ -159,7 +159,7 @@ export default function App() {
           </ul>
           <div className="mt-6 flex justify-center">
             <a
-              href="https://github.com/Raditt10"
+              href="https://github.com/Raditt10?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-accent transition-colors group"
