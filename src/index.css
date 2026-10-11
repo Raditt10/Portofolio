@@ -1,247 +1,178 @@
 @import "tailwindcss";
-/* Fonts are imported via index.html */
-
-/* Minecraft Font Removed */
 
 @theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-soft: hsl(var(--accent-soft));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-heading: "Outfit", system-ui, -apple-system, sans-serif;
-  --font-minecraft: "Outfit", system-ui, -apple-system, sans-serif;
-  --font-code: "Inter", monospace;
 }
 
-body {
-  font-family: var(--font-sans);
+:root {
+  --background: 0 0% 100%;
+  --foreground: 220 15% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 15% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 15% 12%;
+  --primary: 220 15% 12%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 220 15% 20%;
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 9% 46%;
+  --accent: 213 85% 56%;
+  --accent-foreground: 0 0% 100%;
+  --accent-soft: 214 90% 93%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 213 85% 56%;
+  --radius: 1rem;
 }
 
-.font-code {
-  font-family: var(--font-code);
+.dark {
+  --background: 220 15% 7%;
+  --foreground: 220 14% 92%;
+  --card: 220 15% 10%;
+  --card-foreground: 220 14% 92%;
+  --popover: 220 15% 10%;
+  --popover-foreground: 220 14% 92%;
+  --primary: 220 14% 92%;
+  --primary-foreground: 220 15% 7%;
+  --secondary: 220 15% 14%;
+  --secondary-foreground: 220 14% 88%;
+  --muted: 220 15% 14%;
+  --muted-foreground: 220 10% 60%;
+  --accent: 213 90% 68%;
+  --accent-foreground: 220 15% 7%;
+  --accent-soft: 215 45% 20%;
+  --border: 220 15% 18%;
+  --input: 220 15% 18%;
+  --ring: 213 90% 68%;
 }
 
-/* Logo R'e Styling */
-.logo-minecraft {
-  font-family: var(--font-heading);
-  font-weight: 900;
-  text-transform: uppercase;
-  text-shadow:
-    3px 3px 0px rgba(0, 0, 0, 0.9),
-    4px 4px 0px rgba(0, 0, 0, 0.7),
-    5px 5px 0px rgba(255, 255, 255, 0.15),
-    0 0 20px rgba(255, 255, 255, 0.3);
-  letter-spacing: 0.08em;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
-  transform: scale(1);
-  transition: all 0.3s ease;
-}
-
-.logo-minecraft:hover {
-  text-shadow:
-    3px 3px 0px rgba(0, 0, 0, 0.9),
-    4px 4px 0px rgba(0, 0, 0, 0.7),
-    5px 5px 0px rgba(255, 255, 255, 0.2),
-    0 0 30px rgba(255, 255, 255, 0.5);
-  transform: scale(1.05);
-}
-
-.cool-border-gradient {
-  border-bottom: 4px solid transparent;
-  background: linear-gradient(to right, #280087, #c00000);
-  background-clip: border-box;
-  position: relative;
-}
-
-.cool-border-gradient::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(to right, #280087, #c00000);
-}
-
-.masked-img {
-  mask-image: url("/img/Monogram_RS.png");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 50%;
-}
-
-body {
+html {
   scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: hsl(220 15% 7%);
+  color-scheme: dark;
 }
 
-/* Screen reader only utility */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
+html:not(.dark) {
+  background-color: hsl(0 0% 100%);
+  color-scheme: light;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+  margin: 0;
   padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
-.masked-container h2 {
-  font-size: 2.25rem;
-  text-align: center;
-  margin-bottom: 2.5rem;
-  color: white;
-  margin-top: 8rem;
+/* Custom UI Tokens & Utilities matching frama.my.id */
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  flex-shrink: 0;
+  transition: all 0.2s ease;
 }
 
-@media (min-width: 768px) {
-  .masked-container h2 {
-    font-size: 3rem;
+.dashed-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.dashed-fill {
+  flex: 1 1 0%;
+  border-bottom-width: 1px;
+  border-style: dashed;
+  border-color: hsl(var(--border));
+}
+
+@keyframes wave {
+  0%, 60%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
   }
 }
 
-.masked-container div {
-  opacity: 0;
-  padding: 0 1.25rem;
-  gap: 1.25rem;
-  position: absolute;
-  bottom: 13rem;
-  left: 50%;
-  transform: translateX(-50%);
+.animate-wave {
+  animation: wave 2.4s ease-in-out infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
 }
 
-@media (min-width: 768px) {
-  .masked-container div {
-    padding: 0;
-    bottom: 1.25rem;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.masked-container div h3 {
-  font-size: 1.5rem;
-  text-align: center;
-  width: 20rem;
-  color: white;
+.animate-in-fade {
+  animation: fadeUp 0.6s ease-out both;
 }
 
-@media (min-width: 768px) {
-  .masked-container div h3 {
-    font-size: 3rem;
-    width: 100%;
-  }
-}
-
-.masked-container div p {
-  font-size: 1.125rem;
-  text-align: center;
-}
-
-/* ===== CUSTOM SCROLLBAR - ELEGANT CREAM/WHITE THEME ===== */
+/* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0d12;
-  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #f8ecde, #ffffff, #f8ecde);
-  border-radius: 10px;
-  border: 3px solid #0a0d12;
-  box-shadow:
-    inset 0 0 10px rgba(255, 255, 255, 0.3),
-    0 0 15px rgba(248, 236, 222, 0.4);
+  background: hsl(var(--border));
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #ffffff, #f8ecde, #ffffff);
-  box-shadow:
-    inset 0 0 12px rgba(255, 255, 255, 0.4),
-    0 0 20px rgba(248, 236, 222, 0.6);
-}
-
-::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(135deg, #f8ecde, #fef3e2, #f8ecde);
-}
-
-::-webkit-scrollbar-corner {
-  background: #0a0d12;
-}
-
-::-webkit-scrollbar-button {
-  display: none;
-}
-
-/* Firefox */
-* {
-  scrollbar-width: thick;
-  scrollbar-color: #f8ecde #0a0d12;
-}
-
-/* Smooth scrolling untuk textarea di form */
-textarea::-webkit-scrollbar {
-  width: 10px;
-}
-
-textarea::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 5px;
-  margin: 4px;
-}
-
-textarea::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #f8ecde, #ffffff);
-  border-radius: 5px;
-  border: 2px solid rgba(10, 13, 18, 0.5);
-}
-
-/* Custom scrollbar untuk elemen spesifik dengan class scrollbar-cyberpunk */
-.scrollbar-cyberpunk::-webkit-scrollbar {
-  width: 12px;
-}
-
-.scrollbar-cyberpunk::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.scrollbar-cyberpunk::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #f8ecde, #ffffff);
-  border-radius: 6px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 8px rgba(248, 236, 222, 0.3);
-}
-
-/* Animasi untuk scrollbar thumb */
-@keyframes scrollbar-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 8px rgba(248, 236, 222, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 12px rgba(248, 236, 222, 0.5);
-  }
-}
-
-::-webkit-scrollbar-thumb {
-  animation: scrollbar-glow 3s ease-in-out infinite;
-}
-
-/* Untuk browser yang mendukung scrollbar styling di dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    scrollbar-color: #f8ecde #0a0d12;
-  }
-}
-
-/* Responsive scrollbar untuk mobile */
-@media (max-width: 768px) {
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-width: 2px;
-  }
+  background: hsl(var(--muted-foreground));
 }

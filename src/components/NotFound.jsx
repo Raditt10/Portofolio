@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
 
 const NotFound = () => {
   const [theme, setTheme] = useState('dark');
+  const { t } = useLanguage();
 
   useEffect(() => {
     const rootTheme = document?.documentElement?.dataset?.theme;
@@ -49,8 +51,8 @@ const NotFound = () => {
   };
 
   const isLight = theme === 'light';
-
   const navigate = useNavigate();
+
   return (
     <div
       style={{ 
@@ -84,7 +86,7 @@ const NotFound = () => {
           className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-heading"
           style={{ color: themeStyles[theme].text }}
         >
-          Halaman Tidak Ditemukan
+          {t.notFound.title}
         </h2>
 
         {/* Description */}
@@ -92,7 +94,7 @@ const NotFound = () => {
           className="text-base sm:text-lg mb-8"
           style={{ color: themeStyles[theme].secondary }}
         >
-          Oops.. Sepertinya fitur ini belum tersedia.
+          {t.notFound.desc}
         </p>
 
         {/* Button */}
@@ -109,17 +111,15 @@ const NotFound = () => {
           }}
         >
           <svg 
-            className="w-5 h-5"
+            className="w-5 h-5" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
           </svg>
-          <span 
-            className="font-semibold"
-          >
-            Kembali lagi
+          <span className="font-semibold">
+            {t.notFound.button}
           </span>
         </button>
       </div>
