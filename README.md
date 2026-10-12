@@ -1,3 +1,3 @@
-# Rafaditya Syahputra — Portfolio
+# Rafaditya Syahputra | Portfolio
 
 ---
