@@ -55,7 +55,7 @@ export default function App() {
   }, [lang, t.profileData.name, t.profileData.role]);
 
   return (
-    <div id="top" className="min-h-screen bg-background text-foreground transition-colors duration-200">
+    <div id="top" className="min-h-screen bg-background text-foreground transition-colors duration-200 overflow-x-hidden w-full">
       {/* Floating Navigation Header */}
       <HeaderNav theme={theme} toggleTheme={toggleTheme} />
 
