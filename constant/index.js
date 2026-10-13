@@ -5,7 +5,7 @@ const hardSkills = [
   "Next.js",
   "TypeScript",
   "JavaScript",
-  "Tailwind CSS",
+  "Tailwind",
   "Laravel",
   "PHP",
   "Node.js",
