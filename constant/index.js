@@ -18,21 +18,15 @@ const hardSkills = [
   "Vite"
 ];
 
-// Helper pintar untuk menangani teks dwibahasa atau string tunggal
 const localize = (val, lang) => {
   if (!val) return "";
-  if (typeof val === "string") return val; // Jika string biasa, langsung dipakai otomatis di kedua bahasa
+  if (typeof val === "string") return val; 
   if (typeof val === "object") {
-    return val[lang] || val.en || val.id || ""; // Jika ada terjemahan { en, id }, ambil yang sesuai
+    return val[lang] || val.en || val.id || "";
   }
   return val;
 };
 
-// =========================================================================
-// DATA UTAMA (SINGLE SOURCE OF TRUTH)
-// Cukup edit/tambah di sini saja! Urutan dijamin 100% sama di EN dan ID.
-// Format teks: bisa string biasa ("teks") atau objek dwibahasa ({ en: "...", id: "..." })
-// =========================================================================
 
 const rawProfileData = {
   name: "Rafaditya Syahputra",
@@ -102,16 +96,6 @@ const rawSocialLinks = [
 
 const rawPersonalProjects = [
   {
-    title: "Kultilas",
-    date: "2025",
-    description: {
-      en: "Web-based application designed to facilitate the management and tracking of student extracurricular activities in schools.",
-      id: "Aplikasi berbasis web yang dirancang untuk mempermudah pengelolaan dan pemantauan kegiatan ekstrakurikuler siswa di sekolah."
-    },
-    href: "https://github.com/Raditt10/Kultilas",
-    tags: ["Fullstack", "Laravel", "Alpine.js", "Tailwind CSS"]
-  },
-  {
     title: "HoshiDay.io",
     date: "2025",
     description: {
@@ -161,7 +145,7 @@ const rawFeaturedPortfolio = [
       en: "Integrated digital showcase and student work curation platform for SMKN 13 Bandung, connecting vocational portfolio archives (RPL, TKJ, Chemical Analysis) directly with industry partners via the BKK system.",
       id: "Platform etalase digital dan kurasi karya siswa terintegrasi untuk SMKN 13 Bandung, menghubungkan arsip portofolio jurusan (RPL, TKJ, Analis Kimia) langsung dengan mitra industri melalui sistem BKK."
     },
-    href: "https://github.com/Raditt10",
+    href: "https://github.com/Raditt10/Kandaga-JHIC2026",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io", "Gemini API", "Prisma ORM"]
   },
   {
